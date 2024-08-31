@@ -58,7 +58,7 @@ body, html {
 @media (max-width: 768px) {
   .navbar-menu-toggle {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
   }
 
@@ -145,9 +145,8 @@ body, html {
 
 /* Sections */
 section {
-  padding: 50px;
+  padding: 60px;
   text-align: center;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 /* Home Section */
@@ -293,7 +292,7 @@ section {
 /* Responsive view for the Home section */
 @media (max-width: 1200px) {
   .home {
-    padding: 50px 5%; /* Adjust padding for smaller screens */
+    padding: 40px 5%; /* Adjust padding for smaller screens */
     display: flex;
     flex-direction: column; /* Stack image and text vertically */
     align-items: center; /* Center the content */
@@ -332,7 +331,7 @@ section {
     margin-left: -150px; /* Center the image horizontally */
     top: auto; /* Remove the top positioning */
     position: static; /* Change position to static */
-    margin-top: -250px;
+    margin-top: -280px;
     margin-right: 45px;
   }
 
@@ -341,12 +340,98 @@ section {
     height: 100%;
     object-fit: cover; /* Maintain aspect ratio */
   }
+
+    /* Adjustments for smaller screens */
+  .home-sci {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow icons to wrap to the next line */
+    margin-top: -40px;
+    margin-right: -10px; /* Add margin to separate from content */
+  }
+
+  .home-sci a {
+    width: 30px; /* Smaller icon size for mobile */
+    height: 30px; /* Smaller icon size for mobile */
+    margin: 10px 10px 10px 0; /* Adjust margins */
+    font-size: 15px; /* Smaller font size for icons */
+  }
+}
+
+/* About Section */
+.about {
+  padding: 70px 10%;
+  background-color: whitesmoke; /* Adjust background color if needed */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-img {
+  flex: 1;
+  padding-right: 20px; /* Space between image and text */
+  margin-top: 40px;
+}
+
+.abt-res {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.about-text h2 span {
+  color: #66b3ff;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.about-text-container {
+  background-color: whitesmoke; /* Background color */
+  border: 2px solid #ccc; /* Border color */
+  border-radius: 8px; /* Curved border */
+  padding: 20px; /* Padding inside the container */
+  margin-top: 10px; /* Space above the container */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transform: rotate(-3deg); /* Slanting effect */
+  position: relative; /* Ensures the container maintains its position */
+}
+
+/* Responsive Mobile View */
+@media screen and (max-width: 1200px) {
+  .about-content {
+    display: block; /* Stack content vertically */
+    text-align: center; /* Center the text */
+  }
+
+  .about-img {
+    display: none; /* Hide the image */
+  }
+
+  .about-text {
+    flex: none; /* Reset flex property */
+    margin-top: 20px; /* Space above text */
+  }
 }
 
 
 
 
-#about { background-color: #e1e1e1; }
 #skills { background-color: #d1d1d1; }
 #projects { background-color: #c1c1c1; }
 #contact { background-color: #b1b1b1; }

@@ -60,7 +60,7 @@ function App() {
           <h4>Hello, It's Me</h4>
           <h1>PERIASAMY</h1>
           <h4>
-          Currently pursuing a Master's in Computer Applications at CEG, Anna University, Chennai. Deeply passionate in <span className="typed-text"></span>
+          Currently pursuing a Master of Computer Applications at CEG, Anna University, Chennai. Deeply passionate in <span className="typed-text"></span>
           </h4>
           <div className="img">
             <img src="/images/Mine.jpg" className="responsive" alt="main" />
@@ -76,8 +76,19 @@ function App() {
           </a>
         </div>
       </section>
-
-      <section id="about">About Section</section>
+      <section id="about" className="about">
+        <div className="about-content">
+          <div className="about-img">
+            <img src="/images/DSC01067.jpg" className="abt-res" alt="about" />
+          </div>
+          <div className="about-text">
+            <h2>About <span>Me</span></h2>
+            <div className="about-text-container">
+              <p>I'm an MCA student specializing in web development. My passion lies in crafting user-friendly and visually captivating websites. I thrive on collaborating with teams to solve challenges and bring ideas to fruition. Continuously learning, I aim to stay ahead in this dynamic field and contribute innovatively. My goal is to become a full-stack web developer.</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="skills">Skills Section</section>
       <section id="projects">Projects Section</section>
       <section id="contact">Contact Section</section>
