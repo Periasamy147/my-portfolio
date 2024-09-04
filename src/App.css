@@ -157,13 +157,13 @@ section {
   background-color: whitesmoke;
   display: flex;
   align-items: center;
-  padding: 70px 10% 0;
+  padding: 70px 5% 0;
   margin: 0;
 }
 
 .home-content {
-  max-width: 600px;
-  margin-top: -300px;
+  max-width: 720px;
+  margin-top: -100px;
   text-align: left; /* Align text to the left */
   margin-left: 0; /* Adjust the margin to move content to the left */
 }
@@ -253,7 +253,7 @@ section {
 /* Image */
 .img {
   display: inline-block;
-  left: 40%;
+  left: 45%;
   bottom: 15%;
   top: -43%;
   margin-right: 5%;

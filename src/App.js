@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const typed = new Typed('.typed-text', {
-      strings: ['Programming.', 'Problem Solving.', 'Web Development.', 'Android Development.', 'Networking.'],
+      strings: ['Problem Solving.', 'Programming.' , 'Web Development.', 'Android Development.', 'Networking.'],
       typeSpeed: 70,
       backSpeed: 70,
       loop: true,
@@ -60,7 +60,10 @@ function App() {
           <h4>Hello, It's Me</h4>
           <h1>PERIASAMY</h1>
           <h4>
-          Currently pursuing a Master of Computer Applications at CEG, Anna University, Chennai. Deeply passionate in <span className="typed-text"></span>
+            Currently pursuing a Master of Computer Applications at CEG, Anna University, Chennai.
+          </h4>
+          <h4 style={{ marginTop: '-6px'}}>
+            Deeply passionate in <span className="typed-text"></span>
           </h4>
           <div className="img">
             <img src="/images/Mine.jpg" className="responsive" alt="main" />
