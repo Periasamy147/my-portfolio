@@ -293,8 +293,8 @@ section {
 }
 
 .responsive {
-  width: auto;
-  height: auto;
+  width: 85%;
+  height: 100%;
   border-top-left-radius: 251px;
   border-top-right-radius: 251px;
   border-bottom-left-radius: 0px;
@@ -316,7 +316,7 @@ section {
 }
 
 /* Responsive view for the Home section */
-@media (max-width: 1700px) {
+@media (max-width: 1000px) {
   .home {
     padding: 40px 5%; /* Adjust padding for smaller screens */
     display: flex;
