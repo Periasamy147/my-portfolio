@@ -28,7 +28,7 @@ body, html {
 }
 
 .navbar-logo {
-  color: #333333;
+  color: #66b3ff;
   font-size: 2rem;
   text-transform: uppercase;
 }
@@ -64,25 +64,30 @@ body, html {
   }
 
   .navbar-menu {
-    display: none; /* Hide the menu by default in mobile view */
     position: fixed;
     top: 0;
     right: -250px; /* Start off-screen on the right */
     width: 250px;
     height: 100%;
     background-color: #ffffff;
+    border: 2px solid #66b3ff; /* Outer border */
+    border-radius: 30px 0px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     padding-left: 1rem;
     padding-top: 1rem;
-    transition: right 0.3s ease; /* Slide in from the right */
+    transition: right 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s; /* Smooth transitions */
     z-index: 999;
+    opacity: 0; /* Hidden initially */
+    visibility: hidden; /* Ensure the menu is not interactable when off-screen */
   }
 
   .navbar-menu.open {
-    display: flex; /* Show the menu when open */
     right: 0; /* Move into view when open */
+    opacity: 1; /* Make it visible */
+    visibility: visible;
   }
 
   .navbar-menu li {
@@ -91,6 +96,15 @@ body, html {
 
   .navbar-menu li a {
     font-size: 20px;
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded corners for the links */
+    transition: background-color 0.3s ease-in-out; /* Smooth hover transition */
+  }
+
+  .navbar-menu li a:hover {
+    background-color: #f0f0f0; /* Hover background color */
   }
 
   .navbar-container {
@@ -100,6 +114,8 @@ body, html {
 
   .navbar-logo {
     margin-left: 1rem;
+    color: #66b3ff;
+    font-weight: bold; /* Make the logo text bold */
   }
 
   /* Close button */
@@ -109,6 +125,12 @@ body, html {
     right: 15px;
     font-size: 30px;
     cursor: pointer;
+    color: #333; /* Close button color */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+
+  .navbar-close-btn:hover {
+    color: #66b3ff; /* Change color on hover */
   }
 }
 
@@ -129,6 +151,9 @@ body, html {
     align-items: center;
     padding: 0;
     margin: 0;
+    border: none; /* No border on desktop view */
+    border-radius: 0; /* Remove rounded corners on desktop */
+    box-shadow: none; /* Remove shadow on desktop */
   }
 
   .navbar-menu li {
@@ -137,12 +162,14 @@ body, html {
 
   .navbar-menu li a {
     font-size: 25px;
+    color: #333;
   }
 
   .navbar-close-btn {
     display: none; /* Hide close button on desktop view */
   }
 }
+
 
 /* Sections */
 section {
@@ -289,7 +316,7 @@ section {
 }
 
 /* Responsive view for the Home section */
-@media (max-width: 768px) {
+@media (max-width: 1700px) {
   .home {
     padding: 40px 5%; /* Adjust padding for smaller screens */
     display: flex;
@@ -347,20 +374,49 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Allow icons to wrap to the next line */
-    margin-top: -40px;
+    margin-top: -75px;
+    margin-left: -50px;
+    margin-bottom: 20px;
   }
 
   .home-sci a {
     width: 40px; /* Smaller icon size for mobile */
     height: 40px; /* Smaller icon size for mobile */
-    margin: 10px 10px 10px 0; /* Adjust margins */
+    margin: 12px 12px 12px 0; /* Adjust margins */
     font-size: 20px; /* Smaller font size for icons */
+  }
+
+  .btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #66b3ff; /* Blue background initially */
+    border-radius: 40px;
+    height: 20px;
+    width: 130px;
+    font-size: 12px;
+    margin-left: -50px;
+    text-align: center;
+    color: #ffffff; /* White text initially */
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Shorthand property */
+  }
+
+  .btn-box:hover {
+    background: #ffffff; /* White background on hover */
+    color: #66b3ff; /* Blue text on hover */
+    box-shadow: 0 0 5px #66b3ff, 0 0 25px #66b3ff, 0 0 50px #66b3ff, 0 0 100px #66b3ff, 0 0 200px #66b3ff; /* Blue shadow on hover */
   }
 }
 
 /* About Section */
 .about {
   padding: 70px 10%;
+  margin-top: 60px;
   background-color: whitesmoke; /* Adjust background color if needed */
 }
 
@@ -402,6 +458,7 @@ section {
 }
 
 .about-text-container {
+
   background-color: whitesmoke; /* Background color */
   border: 2px solid #ccc; /* Border color */
   border-radius: 8px; /* Curved border */
