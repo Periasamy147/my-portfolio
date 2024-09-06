@@ -273,7 +273,7 @@ section {
 .button {
     position: relative;
     top: -20px;
-    left: 44px;
+    left: 0px;
     margin-top: 30px;
     height: 55px;
     width: 250px;
@@ -283,6 +283,10 @@ section {
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     overflow: hidden;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease; /* Shorthand property */
   }
   
   .button.active {
